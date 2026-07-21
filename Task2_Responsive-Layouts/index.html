@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Section - Flexbox vs Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="page-title">Pricing Section - Flexbox vs CSS Grid</h1>
+  <p class="page-subtitle">Same layout built two different ways for Week 2 task</p>
+
+  <div class="toggle-buttons">
+    <button class="toggle-btn active" onclick="showVersion('flexbox')">Flexbox</button>
+    <button class="toggle-btn" onclick="showVersion('grid')">Grid</button>
+  </div>
+
+  <!-- ================= FLEXBOX VERSION ================= -->
+  <div id="flexbox-version" class="pricing-wrapper">
+    <header class="pricing-header">
+      <h2>Choose Your Plan</h2>
+      <p>Simple pricing, no hidden fees.</p>
+    </header>
+
+    <section class="pricing-cards flex-cards">
+      <div class="card">
+        <h3>Basic</h3>
+        <p class="price">$9<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 1 Project</li>
+          <li><i class="fa-solid fa-check"></i> 5GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> Email Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+
+      <div class="card featured">
+        <span class="badge">Most Popular</span>
+        <h3>Pro</h3>
+        <p class="price">$29<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 10 Projects</li>
+          <li><i class="fa-solid fa-check"></i> 50GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> Priority Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+
+      <div class="card">
+        <h3>Premium</h3>
+        <p class="price">$59<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Unlimited Projects</li>
+          <li><i class="fa-solid fa-check"></i> 500GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+    </section>
+
+    <footer class="pricing-footer">
+      <p>All plans include a 14-day free trial. No credit card required.</p>
+    </footer>
+  </div>
+
+  <!-- ================= GRID VERSION ================= -->
+  <div id="grid-version" class="pricing-wrapper hidden">
+    <header class="pricing-header">
+      <h2>Choose Your Plan</h2>
+      <p>Simple pricing, no hidden fees.</p>
+    </header>
+
+    <section class="pricing-cards grid-cards">
+      <div class="card">
+        <h3>Basic</h3>
+        <p class="price">$9<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 1 Project</li>
+          <li><i class="fa-solid fa-check"></i> 5GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> Email Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+
+      <div class="card featured">
+        <span class="badge">Most Popular</span>
+        <h3>Pro</h3>
+        <p class="price">$29<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 10 Projects</li>
+          <li><i class="fa-solid fa-check"></i> 50GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> Priority Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+
+      <div class="card">
+        <h3>Premium</h3>
+        <p class="price">$59<span>/mo</span></p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Unlimited Projects</li>
+          <li><i class="fa-solid fa-check"></i> 500GB Storage</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 Support</li>
+        </ul>
+        <button>Get Started</button>
+      </div>
+    </section>
+
+    <footer class="pricing-footer">
+      <p>All plans include a 14-day free trial. No credit card required.</p>
+    </footer>
+  </div>
+
+  <script>
+    function showVersion(version) {
+      const flexboxSection = document.getElementById('flexbox-version');
+      const gridSection = document.getElementById('grid-version');
+      const buttons = document.querySelectorAll('.toggle-btn');
+
+      if (version === 'flexbox') {
+        flexboxSection.classList.remove('hidden');
+        gridSection.classList.add('hidden');
+        buttons[0].classList.add('active');
+        buttons[1].classList.remove('active');
+      } else {
+        gridSection.classList.remove('hidden');
+        flexboxSection.classList.add('hidden');
+        buttons[1].classList.add('active');
+        buttons[0].classList.remove('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
