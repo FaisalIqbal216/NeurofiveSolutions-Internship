@@ -1,0 +1,6 @@
+The most confusing part for me was understanding object-fit and object-position in CSS.
+When I made the profile picture circular, the face was not showing properly in the center,
+so I used object-position: top to fix it. I also had some trouble getting the right box-shadow
+value — I wanted a soft shadow to give the card some depth, but not something too heavy.
+Making the card look good on both small (350px) and larger (500px) screens also took a few tries 
+with padding and width adjustments.

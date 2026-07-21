@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  width: 380px;
+  max-width: 100%;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid #2f6f5e;
+}
+
+.top h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  color: #222;
+}
+
+.role {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.bio {
+  padding: 18px 0;
+}
+
+.bio p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #2f6f5e;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #eaf3f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.socials a:hover {
+  background-color: #2f6f5e;
+  color: #fff;
+}
+
+/* for larger screens, give the card a bit more room */
+@media (min-width: 500px) {
+  .profile-card {
+    width: 420px;
+    padding: 35px 30px;
+  }
+}
