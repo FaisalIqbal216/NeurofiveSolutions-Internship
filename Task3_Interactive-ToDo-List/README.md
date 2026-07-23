@@ -26,7 +26,7 @@ I stored all tasks in a JavaScript array, where each task has an id, text, and c
 This task helped me understand how JavaScript can update the page dynamically without reloading it. I practiced using document.querySelector, addEventListener, createElement, and array methods for interactive functionality. I also learned how filtering works and how local storage can improve user experience by saving data in the browser.
 
 ## Live Demo
-Add your Vercel live link here
+https://task3-interactive-todo-list.vercel.app/
 
 ## GitHub Folder
-Add your GitHub folder link here
+https://github.com/FaisalIqbal216/NeurofiveSolutions-Internship/tree/main/Task3_Interactive-ToDo-List
