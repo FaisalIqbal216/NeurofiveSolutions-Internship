@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>faisal.dev — AI Automation &amp; Full-Stack Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="#" class="logo" aria-label="faisal.dev Home">
+          <span class="logo-icon">F</span>
+          <span class="logo-text"
+            >faisal<span class="logo-dot">.dev</span></span
+          >
+        </a>
+        <ul class="nav-links" role="menubar">
+          <li role="none">
+            <a href="#work" class="nav-link" role="menuitem">Work</a>
+          </li>
+          <li role="none">
+            <a href="#process" class="nav-link" role="menuitem">Process</a>
+          </li>
+          <li role="none">
+            <a href="#contact" class="nav-link nav-link--cta" role="menuitem"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle light and dark theme"
+          >
+            <i class="fa-solid fa-moon theme-icon theme-icon--moon"></i>
+            <i class="fa-solid fa-sun theme-icon theme-icon--sun"></i>
+          </button>
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-shapes">
+        <span class="shape shape-1" aria-hidden="true"></span>
+        <span class="shape shape-2" aria-hidden="true"></span>
+        <span class="shape shape-3" aria-hidden="true"></span>
+        <span class="shape shape-4" aria-hidden="true"></span>
+      </div>
+      <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-tagline">Open to freelance &amp; internship work</p>
+        <h1 id="hero-title" class="hero-title">
+          Automations &amp; apps<br />
+          <span class="hero-title-accent">that actually ship.</span>
+        </h1>
+        <p class="hero-description">
+          I'm Faisal Iqbal, a 4th-semester BSIET student at Foundation
+          University Islamabad, building full-stack MERN apps and n8n-powered AI
+          agents — from a voice bot that takes orders over a live call to an
+          email agent that drafts its own replies. No filler. Just working
+          software.
+        </p>
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/923453076651?text=Hi%20Faisal%2C%20I%20saw%20your%20site%20and%20want%20to%20talk%20about%20a%20project"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--primary"
+          >
+            Message on WhatsApp
+            <svg
+              class="btn-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#work" class="btn btn--secondary">
+            <svg
+              class="btn-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            See My Work
+          </a>
+        </div>
+        <figure class="hero-stats" aria-label="Quick stats">
+          <figcaption class="visually-hidden">Quick stats</figcaption>
+          <dl class="stats-grid">
+            <div class="stat-item">
+              <dt class="stat-number" data-target="4">0</dt>
+              <dd class="stat-label">Projects Built</dd>
+            </div>
+            <div class="stat-item">
+              <dt class="stat-number" data-target="6">0</dt>
+              <dd class="stat-label">Weeks Interning</dd>
+            </div>
+            <div class="stat-item">
+              <dt class="stat-number" data-target="24">0</dt>
+              <dd class="stat-label">Hour Reply Time</dd>
+            </div>
+          </dl>
+        </figure>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="floating-card floating-card--1">
+          <span class="floating-card-icon">🎙️</span>
+          <span class="floating-card-text">AI Voice Agent</span>
+        </div>
+        <div class="floating-card floating-card--2">
+          <span class="floating-card-icon">⚛️</span>
+          <span class="floating-card-text">MERN Stack</span>
+        </div>
+        <div class="floating-card floating-card--3">
+          <span class="floating-card-icon">🔗</span>
+          <span class="floating-card-text">n8n Automation</span>
+        </div>
+        <div class="hero-ring"></div>
+      </div>
+    </section>
+
+    <!-- ==================== WORK / FEATURED PROJECTS ==================== -->
+    <section id="work" class="features" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">Featured Work</span>
+          <h2 id="work-title" class="section-title">
+            Real projects, <span class="text-gradient">not mockups</span>
+          </h2>
+          <p class="section-subtitle">
+            A look at what I've shipped so far — full-stack apps and AI
+            automation agents.
+          </p>
+        </header>
+        <ul class="features-grid" role="list">
+          <li class="feature-card reveal-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+            </div>
+            <h3 class="feature-title">FYP Management System</h3>
+            <p class="feature-desc">
+              A MERN app with full JWT authentication and role-based access for
+              Admin, Supervisor, and Student — built component by component,
+              from the admin dashboard down to MongoDB Atlas.
+            </p>
+            <a
+              href="https://github.com/FaisalIqbal216/FYP-Management-System"
+              target="_blank"
+              rel="noopener"
+              class="feature-link"
+              >View on GitHub →</a
+            >
+          </li>
+          <li class="feature-card reveal-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"
+                />
+                <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+                <path d="M12 18v4" />
+                <path d="M8 22h8" />
+              </svg>
+            </div>
+            <h3 class="feature-title">AI Voice Ordering &amp; Support Agent</h3>
+            <p class="feature-desc">
+              A live-call voice agent built in n8n — Vapi.ai handles the speech,
+              Groq's Llama 3.3 does the reasoning, and a Supabase vector store
+              of 117 real products powers order lookup.
+            </p>
+            <a
+              href="https://github.com/FaisalIqbal216"
+              target="_blank"
+              rel="noopener"
+              class="feature-link"
+              >View on GitHub →</a
+            >
+          </li>
+          <li class="feature-card reveal-on-scroll">
+            <div class="feature-icon-wrapper">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Email Responder Agent</h3>
+            <p class="feature-desc">
+              An n8n pipeline that watches Gmail, classifies each message, then
+              drafts a reply with Groq's Llama 3.3 — with sending and Google
+              Sheets logging built into the flow.
+            </p>
+            <a
+              href="https://github.com/FaisalIqbal216/Smart-Email-Responder-Agent"
+              target="_blank"
+              rel="noopener"
+              class="feature-link"
+              >View on GitHub →</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="how-it-works" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-tag">Process</span>
+          <h2 id="process-title" class="section-title">
+            How we'd <span class="text-gradient">work together</span>
+          </h2>
+        </header>
+        <ol class="steps-list" role="list">
+          <li class="step reveal-on-scroll">
+            <span class="step-number">01</span>
+            <h3 class="step-title">Share the idea</h3>
+            <p class="step-desc">
+              Tell me what you're trying to build or automate — a quick call or
+              a message is enough to start.
+            </p>
+          </li>
+          <li class="step reveal-on-scroll">
+            <span class="step-number">02</span>
+            <h3 class="step-title">Build &amp; iterate</h3>
+            <p class="step-desc">
+              I build in short cycles and share progress early, so nothing takes
+              you by surprise.
+            </p>
+          </li>
+          <li class="step reveal-on-scroll">
+            <span class="step-number">03</span>
+            <h3 class="step-title">Launch &amp; support</h3>
+            <p class="step-desc">
+              Once it's live, I stick around to fix bugs and help it grow with
+              your needs.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT / CTA ==================== -->
+    <section id="contact" class="cta" aria-labelledby="cta-title">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content reveal-on-scroll">
+          <h2 id="cta-title" class="cta-title">Got a project in mind?</h2>
+          <p class="cta-subtitle">
+            I reply within a day — WhatsApp is fastest, email works too.
+          </p>
+          <div class="cta-actions">
+            <a
+              href="https://wa.me/923453076651?text=Hi%20Faisal%2C%20I%20saw%20your%20site%20and%20want%20to%20talk%20about%20a%20project"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--primary btn--large"
+            >
+              <i class="fa-brands fa-whatsapp btn-icon"></i>
+              Message on WhatsApp
+            </a>
+            <a
+              href="https://linkedin.com/in/faisal-iqbal-tech"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--secondary btn--large"
+            >
+              <i class="fa-brands fa-linkedin btn-icon"></i>
+              Connect on LinkedIn
+            </a>
+          </div>
+          <p class="cta-note">
+            Based in Rawalpindi/Islamabad, Pakistan · Working remotely,
+            worldwide.
+          </p>
+
+          <div class="cta-divider"><span>or fill this in</span></div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="visually-hidden">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-input"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="visually-hidden">Phone number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-input"
+                  placeholder="Phone number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="visually-hidden">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-input"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message" class="visually-hidden">Your message</label>
+              <textarea
+                id="message"
+                class="form-input form-textarea"
+                rows="4"
+                placeholder="Tell me about your project"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn--primary btn--large form-submit"
+            >
+              <i class="fa-brands fa-whatsapp btn-icon"></i>
+              Send via WhatsApp
+            </button>
+            <p id="formNote" class="form-note"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <span class="logo-icon">F</span>
+              <span class="logo-text"
+                >faisal<span class="logo-dot">.dev</span></span
+              >
+            </a>
+            <p class="footer-tagline">
+              Full-stack &amp; AI automation, built to ship.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-label="Connect navigation">
+            <h3 class="footer-nav-title">Connect</h3>
+            <ul class="footer-nav-list">
+              <li>
+                <a
+                  href="https://github.com/FaisalIqbal216"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-github"></i> GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/faisal-iqbal-tech"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://my-portfolio-smoky-eight-m1d9mgh585.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="fa-solid fa-briefcase"></i> Portfolio</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="footer-nav" aria-label="Site navigation">
+            <h3 class="footer-nav-title">Site</h3>
+            <ul class="footer-nav-list">
+              <li><a href="#work">Work</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Faisal Iqbal.</p>
+          <p class="footer-credit">
+            Built for the Neurofive Solutions Frontend Internship — Week 2.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/923453076651?text=Hi%20Faisal%2C%20I%20saw%20your%20site%20and%20want%20to%20talk%20about%20a%20project"
+      target="_blank"
+      rel="noopener"
+      class="whatsapp-float"
+      aria-label="Message on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <span class="toast-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
