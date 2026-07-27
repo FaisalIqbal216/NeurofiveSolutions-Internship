@@ -6,7 +6,7 @@ A single-page personal/portfolio landing page built to practice CSS transitions,
 `@keyframes` animation, and scroll-triggered reveals with the Intersection
 Observer API.
 
-**Live demo:** _add your Vercel link here_
+**Live demo:** _(https://neurofive-solutions-internship-e649.vercel.app/)_
 **Video walkthrough:** _add your LinkedIn video link here_
 
 ## What's on the page
