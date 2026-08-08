@@ -10,6 +10,7 @@ This repository contains all the tasks I'm completing during my Frontend Web Dev
 | [Task 2 - Pricing Layout](./Task2_Responsive-Layouts) | 3-column pricing section built twice — once with Flexbox, once with CSS Grid | [View Live](https://neurofive-solutions-internship-henna.vercel.app/) |
 | [Task 3 - Interactive To-Do List](./Task3_Interactive-ToDo-List) | Interactive to-do list built with HTML, CSS, and JavaScript | [View Live](https://task3-interactive-todo-list.vercel.app/) |
 | [Task 4 - Animated Landing Page](./Task4_Animated-Landing-Page) | Single-page landing page with CSS transitions, keyframe animations, and a scroll-triggered reveal built with the Intersection Observer API | [View Live](https://neurofive-solutions-internship-e649.vercel.app) |
+| [Task 5 - Weather Dashboard](./Task5_Weather-Dashboard) | Weather dashboard fetching live data from the Open-Meteo API, with city search, loading/error states, and a 3-day forecast | [View Live](https://neurofive-solutions-internship-njcb.vercel.app/) |
 
 More tasks will be added here as the internship progresses.
 

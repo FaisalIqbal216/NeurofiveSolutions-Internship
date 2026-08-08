@@ -6,7 +6,7 @@ A weather dashboard that talks to a live public API. Search any city, see
 current conditions, and get a 3-day forecast — with proper loading and error
 states along the way.
 
-**Live demo:** _add your Vercel link here_
+**Live demo:** https://neurofive-solutions-internship-njcb.vercel.app/
 **Video walkthrough:** _add your LinkedIn video link here_
 
 ## Features
