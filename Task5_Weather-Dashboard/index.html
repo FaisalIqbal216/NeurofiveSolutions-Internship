@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean weather dashboard — search any city for live conditions and a 3-day forecast.">
+    <title>Skyline — Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-decor" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+    </div>
+
+    <div class="page">
+
+        <!-- ==================== HEADER ==================== -->
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-icon">☀️</span>
+                <span class="brand-name">Skyline</span>
+            </div>
+            <p class="tagline">Live weather, wherever you are.</p>
+        </header>
+
+        <main class="main" id="main">
+
+            <!-- ==================== SEARCH ==================== -->
+            <section class="search-section" aria-label="Search for a city">
+                <form id="searchForm" class="search-form" autocomplete="off" novalidate>
+                    <label for="citySearch" class="visually-hidden">Search for a city</label>
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                        </svg>
+                        <input
+                            type="text"
+                            id="citySearch"
+                            class="search-input"
+                            placeholder="Search a city — e.g. Islamabad, London, Tokyo"
+                            aria-describedby="searchHint"
+                        >
+                        <button type="submit" class="search-btn">Search</button>
+                    </div>
+                    <p id="searchHint" class="search-hint">Press Enter or tap Search to look up live weather.</p>
+                </form>
+            </section>
+
+            <!-- ==================== STATUS (loading / error) ==================== -->
+            <div id="statusRegion" class="status-region" role="status" aria-live="polite">
+
+                <div id="loadingState" class="state-card loading-state" hidden>
+                    <span class="spinner" aria-hidden="true"></span>
+                    <p>Fetching the latest weather…</p>
+                </div>
+
+                <div id="errorState" class="state-card error-state" hidden>
+                    <span class="state-icon" aria-hidden="true">⚠️</span>
+                    <p id="errorMessage">Couldn't find that city. Try a different spelling or a bigger nearby city.</p>
+                    <button id="retryBtn" class="btn-retry" type="button">Try Again</button>
+                </div>
+
+            </div>
+
+            <!-- ==================== CURRENT WEATHER ==================== -->
+            <section id="weatherCard" class="weather-card" aria-labelledby="cityName" hidden>
+                <div class="weather-card-top">
+                    <div>
+                        <h1 id="cityName" class="city-name">—</h1>
+                        <p id="weatherDesc" class="weather-desc">—</p>
+                    </div>
+                    <div class="current-icon" id="currentIcon" aria-hidden="true">—</div>
+                </div>
+
+                <div class="weather-card-main">
+                    <span id="currentTemp" class="current-temp">—°</span>
+                    <dl class="weather-stats">
+                        <div class="weather-stat">
+                            <dt>Feels like</dt>
+                            <dd id="feelsLike">—°</dd>
+                        </div>
+                        <div class="weather-stat">
+                            <dt>Humidity</dt>
+                            <dd id="humidity">—%</dd>
+                        </div>
+                        <div class="weather-stat">
+                            <dt>Wind</dt>
+                            <dd id="windSpeed">— km/h</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- ==================== 3-DAY FORECAST ==================== -->
+                <div class="forecast" aria-label="3-day forecast">
+                    <h2 class="forecast-title">Next 3 Days</h2>
+                    <ul class="forecast-list" id="forecastList" role="list">
+                        <!-- forecast cards injected by JS -->
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>Weather data from <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>. Built by Faisal Iqbal for the Neurofive Solutions Frontend Internship.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
