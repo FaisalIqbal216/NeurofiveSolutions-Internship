@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell — Notes App</title>
+  <meta name="description" content="A notes app with form validation and localStorage persistence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="brand">
+        <span class="brand-mark" aria-hidden="true">&#9998;</span>
+        Inkwell
+      </p>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- Live region for validation / save / delete / search feedback -->
+    <p id="form-status" class="visually-hidden" role="status" aria-live="polite"></p>
+
+    <section class="composer" aria-labelledby="composer-heading">
+      <p class="eyebrow">Compose</p>
+      <h1 id="composer-heading">New Note</h1>
+      <p class="composer-sub" id="composer-mode-label">Write something worth keeping.</p>
+
+      <form id="note-form" novalidate>
+        <div class="field">
+          <label for="note-title">Title</label>
+          <input
+            type="text"
+            id="note-title"
+            name="title"
+            maxlength="80"
+            autocomplete="off"
+            aria-describedby="title-error"
+            aria-invalid="false"
+          >
+          <span class="error-message" id="title-error" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="note-content">Note</label>
+          <textarea
+            id="note-content"
+            name="content"
+            rows="5"
+            aria-describedby="content-error"
+            aria-invalid="false"
+          ></textarea>
+          <span class="error-message" id="content-error" role="alert"></span>
+        </div>
+
+        <div class="composer-actions">
+          <button type="submit" id="submit-btn" class="btn btn-primary">Save Note</button>
+          <button type="button" id="cancel-edit-btn" class="btn btn-ghost" hidden>Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notes-heading">
+      <div class="notes-section-head">
+        <h2 id="notes-heading">Your Notes <span id="notes-count" class="notes-count">0</span></h2>
+
+        <search class="search-bar">
+          <label for="note-search" class="visually-hidden">Search notes</label>
+          <span class="search-icon" aria-hidden="true">&#128269;</span>
+          <input type="search" id="note-search" placeholder="Search notes by title or content" autocomplete="off">
+        </search>
+      </div>
+
+      <ul id="notes-list" class="notes-grid"></ul>
+
+      <p id="empty-state" class="empty-state" hidden>
+        No notes yet — the field above is waiting for your first one.
+      </p>
+
+      <p id="no-results-state" class="empty-state" hidden>
+        Nothing matches that search.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Faisal &middot; Neurofive Solutions Internship, Task 6</p>
+  </footer>
+
+  <template id="note-card-template">
+    <li class="note-item">
+      <article class="note-card">
+        <div class="note-view">
+          <header class="note-card-head">
+            <h3 class="note-title"></h3>
+            <div class="note-actions">
+              <button type="button" class="icon-btn edit-btn" aria-label="Edit note">
+                <span aria-hidden="true">&#9998;</span>
+              </button>
+              <button type="button" class="icon-btn delete-btn" aria-label="Delete note">
+                <span aria-hidden="true">&#128465;</span>
+              </button>
+            </div>
+          </header>
+          <p class="note-content"></p>
+          <footer class="note-meta">
+            <span class="meta-icon" aria-hidden="true">&#128337;</span>
+            <span class="note-timestamp"></span>
+          </footer>
+        </div>
+        <div class="note-confirm" hidden>
+          <p class="confirm-message">Delete &ldquo;<span class="confirm-title"></span>&rdquo;? This can&rsquo;t be undone.</p>
+          <div class="confirm-actions">
+            <button type="button" class="btn btn-ghost confirm-no">Keep it</button>
+            <button type="button" class="btn btn-danger confirm-yes">Delete</button>
+          </div>
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
