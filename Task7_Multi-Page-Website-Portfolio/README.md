@@ -17,7 +17,6 @@ Plain HTML5, CSS3, and vanilla JavaScript — no frameworks or libraries.
 I went with real separate HTML files rather than a JS router, so the navbar and footer markup is genuinely repeated at the top and bottom of each of the four pages — I chose this over a fetch-based include specifically so every page works from a plain file, with no build step or server dependency. What I did centralize is everything that could actually drift out of sync: all four navbars link to `css/style.css` and `js/script.js`, so the look, the theme toggle, the animated hamburger menu, and the active-link styling are controlled from one place each — updating a hover color or the menu animation only ever means editing one file, regardless of how many pages exist. The only page-specific markup difference in each navbar copy is which link carries the `active` class, since that's inherently tied to which page you're on. The one page that's genuinely dynamic is Projects, which pulls from `js/projects-data.js` and loops over the array to build cards, so adding a project means adding one object rather than writing new HTML in four different card blocks.
 
 ## Live Demo
-_Add the Vercel link here after deploying this folder as its own project._
-
+https://neurofive-solutions-internship-h4ea.vercel.app
 ## Video
 _1-2 min walkthrough: navigate Home → About → Projects → Contact on desktop, then repeat on a mobile-width view, and show the contact form validation + WhatsApp hand-off._
