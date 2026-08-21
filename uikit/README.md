@@ -66,7 +66,7 @@ This approach helped me understand the same principles used in modern frameworks
 
 ## Live Demo
 
-https://neurofive-solutions-internship-h4ea.vercel.app
+https://neurofive-solutions-internship-vh2e.vercel.app/
 
 ## Video
 

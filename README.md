@@ -13,12 +13,14 @@ This repository contains all the tasks I'm completing during my Frontend Web Dev
 | [Task 5 - Weather Dashboard](./Task5_Weather-Dashboard) | Weather dashboard fetching live data from the Open-Meteo API, with city search, loading/error states, and a 3-day forecast | [View Live](https://neurofive-solutions-internship-njcb.vercel.app/) |
 | [Task 6 - Notes App](./Task6_Forms-LocalStorage-NotesApp) | "Inkwell" — a notes app with create/edit/delete/search, inline form validation, and full persistence via localStorage | [View Live](https://neurofive-solutions-internship-bav4.vercel.app/) |
 | [Task 7 - Multi-Page Portfolio](./Task7_Multi-Page-Website-Portfolio) | Personal portfolio with 4 pages (Home, About, Projects, Contact), a shared navbar/footer, projects rendered dynamically from a JS array, and a validated contact form | [View Live](https://neurofive-solutions-internship-h4ea.vercel.app/) |
+| [Task 8 - Reusable UI Kit](./uikit) | Reusable UI component library built with vanilla JavaScript featuring Button, Card, Modal, and Toast components using a component-based architecture similar to React | [View Live](https://neurofive-solutions-internship-vh2e.vercel.app/) |
 
 More tasks will be added here as the internship progresses.
 
 ## About Me
 
 **Faisal Iqbal**
-BSIT Student, Foundation University Islamabad
+
+BSIET Student, Foundation University Islamabad
 
 [GitHub](https://github.com/FaisalIqbal216) · [LinkedIn](https://linkedin.com/in/faisal-iqbal-tech) · [Portfolio](https://my-portfolio-smoky-eight-m1d9mgh585.vercel.app/)
