@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nebula UI — Vanilla JS Component Kit</title>
+  <meta name="description" content="A reusable UI kit built with vanilla JavaScript: Button, Card, Modal and Toast components." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Nebula UI home">
+        <span class="brand-dot" aria-hidden="true"></span> Nebula<span class="brand-accent">UI</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#buttons">Buttons</a>
+        <a href="#cards">Cards</a>
+        <a href="#modal">Modal</a>
+        <a href="#toast">Toast</a>
+      </nav>
+      <div id="themeToggleMount"></div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <p class="eyebrow">Week 5 · Component Thinking</p>
+      <h1>Reusable UI, <span class="grad-text">zero frameworks.</span></h1>
+      <p class="hero-sub">
+        Four self-contained components — <code>createButton()</code>, <code>createCard()</code>,
+        <code>createModal()</code> and <code>toast()</code> — each driven purely by props,
+        exactly how React components think.
+      </p>
+      <div class="hero-actions" id="heroActions"></div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ================= BUTTONS ================= -->
+    <section class="demo-section" id="buttons">
+      <div class="section-head">
+        <span class="section-tag">Component 01</span>
+        <h2>Button</h2>
+        <p>One function, every variant. Props: <code>text</code>, <code>variant</code>, <code>size</code>, <code>icon</code>, <code>loading</code>, <code>disabled</code>, <code>onClick</code>.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Variants</h3>
+        <div class="row" id="btnVariants"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Sizes &amp; Icons</h3>
+        <div class="row" id="btnSizes"></div>
+      </div>
+
+      <div class="panel">
+        <h3>States</h3>
+        <div class="row" id="btnStates"></div>
+      </div>
+    </section>
+
+    <!-- ================= CARDS ================= -->
+    <section class="demo-section" id="cards">
+      <div class="section-head">
+        <span class="section-tag">Component 02</span>
+        <h2>Card</h2>
+        <p>Props: <code>title</code>, <code>body</code>, <code>image</code>, <code>badge</code>, <code>footer</code>, <code>variant</code>. Composed using the same Button component.</p>
+      </div>
+      <div class="card-grid" id="cardGrid"></div>
+    </section>
+
+    <!-- ================= MODAL ================= -->
+    <section class="demo-section" id="modal">
+      <div class="section-head">
+        <span class="section-tag">Component 03</span>
+        <h2>Modal</h2>
+        <p>Focus-trapped, closes on <kbd>Esc</kbd> / overlay click, returns focus to the trigger. Includes a destructive-action confirmation pattern.</p>
+      </div>
+      <div class="panel">
+        <div class="row" id="modalTriggers"></div>
+      </div>
+    </section>
+
+    <!-- ================= TOAST ================= -->
+    <section class="demo-section" id="toast">
+      <div class="section-head">
+        <span class="section-tag">Component 04</span>
+        <h2>Toast</h2>
+        <p>Auto-dismiss with progress bar, pause-on-hover, manual close, and vertical stacking for multiple notifications.</p>
+      </div>
+      <div class="panel">
+        <div class="row" id="toastTriggers"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with vanilla JS · Component thinking first, framework later.</p>
+    </div>
+  </footer>
+
+  <!-- Toast stack lives here (created by toast.js) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
